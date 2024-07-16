@@ -1,10 +1,17 @@
 //@ts-check
 require('dotenv').config()
-
+const fs = require("node:fs");
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
-const serviceAccount = require('../../testapi-1598190330536-firebase-adminsdk-3vne2-909e500c6c.json');
+
 const ErrorCodes = require('./ErrorCodes');
+
+const firebase_config_path = process.env.NODE_ENV == 'prod' ?
+  '/etc/secrets/testapi-1598190330536-firebase-adminsdk-3vne2-909e500c6c.json'
+  : '../../testapi-1598190330536-firebase-adminsdk-3vne2-909e500c6c.json';
+const serviceAccount = JSON.parse(fs.readFileSync(firebase_config_path, 'utf-8'))
+
+
 
 initializeApp({
   // @ts-ignore
