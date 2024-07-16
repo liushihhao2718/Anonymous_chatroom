@@ -1,0 +1,46 @@
+.compose {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 16px;
+    padding: 24px;
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+.compose input {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    padding: 12px;
+    margin: 0 16px 0 0;
+    flex-grow: 1;
+}
+
+.compose button {
+    font-size: 14px;
+}
+
+/* Chat Sidebar Styles */
+
+.room_title {
+    font-weight: 400;
+    font-size: 22px;
+    background: #2c2f3a;
+    padding: 24px;   
+}
+
+.list_title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 4px;
+    padding: 12px 24px 0 24px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 12px 24px 0 24px;
+}
